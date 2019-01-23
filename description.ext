@@ -1,0 +1,64 @@
+#include "tb3\loadouts.hpp"
+
+class Extended_PreInit_EventHandlers {
+	class tb3 {
+		init = "call ('tb3\preInit.sqf' call SLX_XEH_COMPILE)";
+	};
+	class itc_framework {
+		init = "call ('core\preInit.sqf' call SLX_XEH_COMPILE)";
+	};
+};
+class CfgSettings {
+	class CBA {
+		class Caching {
+			compile = 0;
+			xeh = 0;
+			functions = 0;
+		};
+	};
+};
+
+#include "settings\description.hpp"
+
+respawnOnStart = -1;
+
+
+
+class CfgDebriefing
+{  
+	class allDead
+	{
+		subtitle = "All Players Killed";
+		description = "What a massacre!";
+	};
+	class majorv
+	{
+		subtitle = "Major Victory";
+		description = "The field is littered with the enemy dead!";
+	};
+	class victory
+	{
+		subtitle = "Decisive Victory";
+		description = "You have won a victory to be proud of today";
+	};
+	class minorv
+	{
+		subtitle = "Close Victory";
+		description = "You have won, but at what cost?";
+	};
+	class majord
+	{
+		subtitle = "Horrific Defeat";
+		description = "You will pay for this shameful display!";
+	};
+	class defeat
+	{
+		subtitle = "Decisive Defeat";
+		description = "We have been roundly beaten today.";
+	};
+	class minord
+	{
+		subtitle = "Close Defeat";
+		description = "You have been bested, but with honour.";
+	};
+};
